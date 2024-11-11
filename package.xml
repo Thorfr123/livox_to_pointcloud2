@@ -3,20 +3,20 @@
 <package format="3">
   <name>livox_to_pointcloud2</name>
   <version>0.0.1</version>
-  <description>This package converts Livox custom messages to ROS 2 PointCloud2 data types, facilitating the integration of Livox lidar sensors into ROS 2 ecosystems.</description>
+  <description>This package converts Livox custom messages to ROS PointCloud2 data types, facilitating the integration of Livox lidar sensors into ROS ecosystems.</description>
   <maintainer email="porizou.electro@gmail.com">porizou</maintainer>
-  <license>Apache 2.0</license>  <!-- Example license, replace with your actual choice -->
+  <license>Apache 2.0</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>rclcpp</depend>
+  <!-- Build dependencies for ROS 1 (Noetic) -->
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- Runtime dependencies -->
+  <depend>roscpp</depend>
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
-  <depend>livox_ros_driver2</depend>  <!-- Assuming this is a real dependency -->
-
-  <test_depend>ament_lint_auto</test_depend>
-  <test_depend>ament_lint_common</test_depend>
+  <depend>livox_ros_driver</depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <build_type>catkin</build_type>
   </export>
 </package>
